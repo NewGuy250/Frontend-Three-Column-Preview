@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 10px;
+
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.three-column-preview {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80%;
+
+    margin: 0 auto;
+}
+
+.sedan-column,
+.suv-column,
+.luxury-column {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 3rem;
+
+    max-height: 500px;
+    width: 400px;
+}
+
+.sedan-column {
+    background-color: hsl(31, 77%, 52%);
+
+    border-radius: 10px 0 0 10px;
+}
+
+.suv-column {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury-column {
+    background-color: hsl(179, 100%, 13%);
+
+    border-radius: 0 10px 10px 0;
+}
+
+img {
+    width: 56px;
+    height: 35px;
+
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-family: 'Big Shoulders Display', sans-serif;
+
+    margin-bottom: 2rem
+}
+
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+
+    line-height: 1.5rem;
+
+    margin-bottom: 6rem;
+}
+
+button {
+    background-color: #fff;
+
+    border: 2px solid white;
+
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+
+    width: 150px;
+    padding: 15px 0px;
+
+    border-radius: 75px;
+
+    transition: 0.3s ease;
+}
+
+.sedan-column button {
+    color: hsl(31, 77%, 52%);
+}
+.suv-column button {
+    color: hsl(184, 100%, 22%);
+}
+.luxury-column button {
+    color: hsl(179, 100%, 13%);
+}
+.sedan-column button:hover,
+.suv-column button:hover,
+.luxury-column button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .three-column-preview {
+        flex-direction: column;
+    }
+
+    .sedan-column {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury-column {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .description {
+        margin-bottom: 2rem;
+    }
+}
